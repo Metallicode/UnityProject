@@ -21,19 +21,20 @@ public class Ball_Script : MonoBehaviour
 
         if (collision.transform.gameObject.tag == "Plate")
         {
-            score.Set_Score(5);
-            soundmanager.PlaySound(0);
-            Destroy(gameObject);
-
+            CollisionHandler(5,0);
         }
         else if (collision.transform.gameObject.tag == "Fail")
         {
-            score.Set_Score(-5);
-            soundmanager.PlaySound(1);
-            Destroy(gameObject);
+            CollisionHandler(-5,1);
         }
-
-
-      
     }
+
+
+    void CollisionHandler(int currentscore, int soundindex)
+    {
+        score.Set_Score(currentscore);
+        soundmanager.PlaySound(soundindex);
+        Destroy(gameObject);
+    }
+
 }
