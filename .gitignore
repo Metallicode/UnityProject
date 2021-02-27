@@ -1,0 +1,7 @@
+Library/
+Temp/
+UnityProject.sln
+UserSettings/
+obj/
+.vs/
+Assembly-CSharp.csproj

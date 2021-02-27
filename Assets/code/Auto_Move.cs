@@ -5,8 +5,8 @@ using UnityEngine;
 public class Auto_Move : MonoBehaviour
 {
 
-    [SerializeField] float Movement_Size = 0.01f;
-
+    float Movement_Size = 0.015f;
+    [SerializeField] float Speed = 0.01f;
 
     void Start()
     {
@@ -16,6 +16,6 @@ public class Auto_Move : MonoBehaviour
     
     void Update()
     {
-        transform.position += transform.right * (Mathf.Sin(Time.time) * Movement_Size);
+        transform.position += transform.right * (Mathf.Sin(Time.time* Speed) * Movement_Size);
     }
 }

@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 
     private void PrintScore()
     {
-        Debug.Log(Current_Score);
+        //Debug.Log(Current_Score);
         text.text = Current_Score.ToString();
     }
 
